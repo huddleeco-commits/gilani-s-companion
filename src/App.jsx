@@ -7,6 +7,7 @@ import { LoginScreen } from './screens/LoginScreen';
 import { ProfileScreen } from './screens/ProfileScreen';
 import { ReservationsScreen } from './screens/ReservationsScreen';
 import { MenuScreen } from './screens/MenuScreen';
+import { OrderScreen } from './screens/OrderScreen';
 import { ContactScreen } from './screens/ContactScreen';
 import { LoyaltyScreen } from './screens/LoyaltyScreen';
 
@@ -40,10 +41,11 @@ function AppRoutes() {
             <HomeScreen />
           </ProtectedRoute>
         } />
-          <Route path="/reservations" element={<ReservationsScreen />} />
-          <Route path="/menu" element={<MenuScreen />} />
-          <Route path="/contact" element={<ContactScreen />} />
-          <Route path="/loyalty" element={<LoyaltyScreen />} />
+        <Route path="/reservations" element={<ReservationsScreen />} />
+        <Route path="/menu" element={<MenuScreen />} />
+        <Route path="/order" element={<OrderScreen />} />
+        <Route path="/contact" element={<ContactScreen />} />
+        <Route path="/loyalty" element={<LoyaltyScreen />} />
         <Route path="/profile" element={
           <ProtectedRoute>
             <ProfileScreen />

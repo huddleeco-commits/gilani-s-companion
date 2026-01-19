@@ -1,19 +1,18 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
-import { Calendar, Book, Gift, Phone } from 'lucide-react';
-
-const BUSINESS_NAME = "Gilani's";
+import { Calendar, Book, Gift, Phone, ShoppingBag } from 'lucide-react';
+import { BUSINESS_NAME } from '../data/menu';
 
 export function HomeScreen() {
   const { user } = useAuth();
   const navigate = useNavigate();
 
   const quickActions = [
+    { icon: <ShoppingBag size={28} />, label: 'Order Online', route: '/order', color: '#10b981' },
     { icon: <Calendar size={28} />, label: 'Reservations', route: '/reservations', color: '#8b5cf6' },
     { icon: <Book size={28} />, label: 'Menu', route: '/menu', color: '#f59e0b' },
-    { icon: <Gift size={28} />, label: 'Loyalty', route: '/loyalty', color: '#10b981' },
-    { icon: <Phone size={28} />, label: 'Contact', route: '/contact', color: '#3b82f6' },
+    { icon: <Gift size={28} />, label: 'Rewards', route: '/loyalty', color: '#ec4899' },
   ];
 
   return (
@@ -63,6 +62,28 @@ export function HomeScreen() {
           </button>
         ))}
       </div>
+
+      {/* Contact Quick Link */}
+      <button
+        onClick={() => navigate('/contact')}
+        style={{
+          width: '100%',
+          marginTop: '16px',
+          padding: '16px',
+          background: 'rgba(255,255,255,0.05)',
+          border: '1px solid rgba(255,255,255,0.1)',
+          borderRadius: '16px',
+          color: 'white',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '8px',
+          cursor: 'pointer'
+        }}
+      >
+        <Phone size={18} color="rgba(255,255,255,0.6)" />
+        <span style={{ color: 'rgba(255,255,255,0.6)' }}>Contact Us</span>
+      </button>
 
       {/* Recent Activity */}
       <h3 style={{ margin: '24px 0 16px', fontSize: '16px', fontWeight: '600' }}>Recent Activity</h3>
