@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Home, Gift, User } from 'lucide-react';
+import { Home, Gift, User, ShoppingBag } from 'lucide-react';
 
 export function BottomNav() {
   return (
@@ -9,7 +9,11 @@ export function BottomNav() {
         <Home size={24} />
         <span className="nav-label">Home</span>
       </NavLink>
-      <NavLink to="/rewards" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+      <NavLink to="/order" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+        <ShoppingBag size={24} />
+        <span className="nav-label">Order</span>
+      </NavLink>
+      <NavLink to="/loyalty" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
         <Gift size={24} />
         <span className="nav-label">Rewards</span>
       </NavLink>

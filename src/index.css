@@ -5,8 +5,9 @@
 }
 
 :root {
-  --primary: #8b5cf6;
-  --primary-dark: #7c3aed;
+  --primary: #c4a35a;
+  --primary-dark: #a88b45;
+  --accent: #c4a35a;
   --bg-dark: #0a0a0f;
   --bg-card: rgba(255, 255, 255, 0.05);
   --text-primary: #ffffff;
@@ -55,17 +56,16 @@ body {
 .quick-actions-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin-top: 24px;
+  gap: 12px;
 }
 
 /* Cards */
 .card {
   background: var(--bg-card);
-  border-radius: 20px;
-  padding: 24px;
+  border-radius: 16px;
+  padding: 20px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Buttons */
@@ -85,6 +85,11 @@ body {
 .btn-primary:active {
   transform: scale(0.98);
   opacity: 0.9;
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .btn-secondary {
@@ -140,7 +145,7 @@ body {
 .spinner {
   width: 40px;
   height: 40px;
-  border: 3px solid rgba(139, 92, 246, 0.2);
+  border: 3px solid rgba(196, 163, 90, 0.2);
   border-top-color: var(--primary);
   border-radius: 50%;
   animation: spin 1s linear infinite;
@@ -163,6 +168,7 @@ body {
   border-radius: 16px;
   padding: 16px;
   text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .stat-value {
@@ -172,9 +178,11 @@ body {
 }
 
 .stat-label {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--text-secondary);
   margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* Bottom Nav */
@@ -185,9 +193,9 @@ body {
   right: 0;
   height: calc(70px + var(--safe-area-bottom));
   padding-bottom: var(--safe-area-bottom);
-  background: rgba(10, 10, 15, 0.9);
+  background: rgba(10, 10, 15, 0.95);
   backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -211,4 +219,19 @@ body {
 .nav-label {
   font-size: 10px;
   font-weight: 500;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
 }
