@@ -13,9 +13,9 @@ export function ProfileScreen() {
     navigate('/login');
   };
 
-  // Steakhouse accent color
-  const accentColor = '#c4a35a';
-  const accentGradient = 'linear-gradient(135deg, #c4a35a, #8b7355)';
+  // Gilani's brand colors
+  const accentColor = '#C9A961';
+  const accentGradient = 'linear-gradient(135deg, #722F37, #5a252c)';
 
   return (
     <div className="screen">

@@ -57,7 +57,7 @@ export function LoyaltyScreen() {
 
       {/* Points Card */}
       <div className="card" style={{
-        background: 'linear-gradient(135deg, #8b5cf6, #6366f1)',
+        background: 'linear-gradient(135deg, #722F37, #5a252c)',
         marginBottom: '20px',
         padding: '24px'
       }}>
@@ -105,7 +105,7 @@ export function LoyaltyScreen() {
             padding: '8px 0',
             borderBottom: idx < currentTierData.perks.length - 1 ? '1px solid rgba(255,255,255,0.1)' : 'none'
           }}>
-            <Star size={16} color="#f59e0b" fill="#f59e0b" />
+            <Star size={16} color="#C9A961" fill="#C9A961" />
             <span>{perk}</span>
           </div>
         ))}
@@ -123,7 +123,7 @@ export function LoyaltyScreen() {
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <div style={{ flex: 1 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <Gift size={18} color="#8b5cf6" />
+                    <Gift size={18} color="#722F37" />
                     <span style={{ fontWeight: '600' }}>{reward.name}</span>
                   </div>
                   <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.5)', marginTop: '4px' }}>
@@ -136,7 +136,7 @@ export function LoyaltyScreen() {
                     padding: '8px 16px',
                     borderRadius: '20px',
                     border: 'none',
-                    background: canRedeem ? '#8b5cf6' : 'rgba(255,255,255,0.1)',
+                    background: canRedeem ? '#722F37' : 'rgba(255,255,255,0.1)',
                     color: 'white',
                     fontSize: '13px',
                     fontWeight: '600',

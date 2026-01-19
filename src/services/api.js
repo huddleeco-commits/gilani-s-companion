@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL || 'https://api.gilani-s.be1st.io';
+const API_URL = import.meta.env.VITE_API_URL || 'https://gilani-s-backend.up.railway.app';
 
 class ApiService {
   constructor() {
@@ -80,6 +80,46 @@ class ApiService {
   async delete(endpoint) {
     return this.request(endpoint, {
       method: 'DELETE',
+    });
+  }
+
+  // Menu
+  async getMenu() {
+    return this.request('/api/menu');
+  }
+
+  // Orders
+  async createOrder(orderData) {
+    return this.request('/api/orders', {
+      method: 'POST',
+      body: JSON.stringify(orderData),
+    });
+  }
+
+  async getOrders() {
+    return this.request('/api/orders');
+  }
+
+  // Loyalty
+  async getLoyaltyConfig() {
+    return this.request('/api/loyalty/config');
+  }
+
+  async getUserLoyalty(userId) {
+    return this.request(`/api/loyalty/user/${userId}`);
+  }
+
+  async addPoints(userId, points, reason) {
+    return this.request(`/api/loyalty/user/${userId}/add`, {
+      method: 'POST',
+      body: JSON.stringify({ points, reason }),
+    });
+  }
+
+  async redeemReward(userId, rewardId) {
+    return this.request(`/api/loyalty/user/${userId}/redeem`, {
+      method: 'POST',
+      body: JSON.stringify({ rewardId }),
     });
   }
 }

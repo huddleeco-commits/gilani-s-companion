@@ -70,7 +70,7 @@ export function ContactScreen() {
             cursor: 'pointer'
           }}
         >
-          <Phone size={28} color="#10b981" style={{ marginBottom: '8px' }} />
+          <Phone size={28} color="#C9A961" style={{ marginBottom: '8px' }} />
           <span style={{ fontWeight: '600' }}>Call Us</span>
           <span style={{ fontSize: '12px', color: 'rgba(255,255,255,0.5)', marginTop: '4px' }}>
             {BUSINESS_INFO.phone}
@@ -89,7 +89,7 @@ export function ContactScreen() {
             cursor: 'pointer'
           }}
         >
-          <Mail size={28} color="#3b82f6" style={{ marginBottom: '8px' }} />
+          <Mail size={28} color="#722F37" style={{ marginBottom: '8px' }} />
           <span style={{ fontWeight: '600' }}>Email</span>
           <span style={{ fontSize: '12px', color: 'rgba(255,255,255,0.5)', marginTop: '4px' }}>
             Send a message
@@ -107,7 +107,7 @@ export function ContactScreen() {
         onClick={handleDirections}
       >
         <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-          <MapPin size={20} color="#8b5cf6" style={{ flexShrink: 0, marginTop: '2px' }} />
+          <MapPin size={20} color="#722F37" style={{ flexShrink: 0, marginTop: '2px' }} />
           <div style={{ flex: 1 }}>
             <div style={{ fontWeight: '500', marginBottom: '4px' }}>{BUSINESS_NAME}</div>
             <div style={{ fontSize: '14px', color: 'rgba(255,255,255,0.6)' }}>{BUSINESS_INFO.address}</div>

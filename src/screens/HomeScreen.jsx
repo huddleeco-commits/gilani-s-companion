@@ -9,10 +9,10 @@ export function HomeScreen() {
   const navigate = useNavigate();
 
   const quickActions = [
-    { icon: <ShoppingBag size={28} />, label: 'Order Online', route: '/order', color: '#10b981' },
-    { icon: <Calendar size={28} />, label: 'Reservations', route: '/reservations', color: '#8b5cf6' },
-    { icon: <Book size={28} />, label: 'Menu', route: '/menu', color: '#f59e0b' },
-    { icon: <Gift size={28} />, label: 'Rewards', route: '/loyalty', color: '#ec4899' },
+    { icon: <ShoppingBag size={28} />, label: 'Order Online', route: '/order', color: '#C9A961' },
+    { icon: <Calendar size={28} />, label: 'Reservations', route: '/reservations', color: '#722F37' },
+    { icon: <Book size={28} />, label: 'Menu', route: '/menu', color: '#C9A961' },
+    { icon: <Gift size={28} />, label: 'Rewards', route: '/loyalty', color: '#722F37' },
   ];
 
   return (
@@ -93,14 +93,14 @@ export function HomeScreen() {
             <div style={{ fontWeight: '500' }}>Dinner Reservation</div>
             <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.5)' }}>Jan 15, 2026 • 7:00 PM</div>
           </div>
-          <div style={{ color: '#10b981', fontSize: '14px' }}>+150 pts</div>
+          <div style={{ color: '#C9A961', fontSize: '14px' }}>+150 pts</div>
         </div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 0' }}>
           <div>
             <div style={{ fontWeight: '500' }}>Ribeye Steak Order</div>
             <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.5)' }}>Jan 10, 2026 • $89.00</div>
           </div>
-          <div style={{ color: '#10b981', fontSize: '14px' }}>+89 pts</div>
+          <div style={{ color: '#C9A961', fontSize: '14px' }}>+89 pts</div>
         </div>
       </div>
     </div>

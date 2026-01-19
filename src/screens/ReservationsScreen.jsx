@@ -39,7 +39,7 @@ export function ReservationsScreen() {
         <div style={{ textAlign: 'center', padding: '60px 20px' }}>
           <div style={{
             width: '80px', height: '80px', borderRadius: '50%',
-            background: 'linear-gradient(135deg, #10b981, #059669)',
+            background: 'linear-gradient(135deg, #C9A961, #a88942)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             margin: '0 auto 24px'
           }}>
@@ -50,7 +50,7 @@ export function ReservationsScreen() {
             {BUSINESS_NAME} • {dates.find(d => d.value === selectedDate)?.label}<br />
             {selectedTime} • Party of {partySize}
           </p>
-          <p style={{ color: '#10b981', fontSize: '14px', marginBottom: '32px' }}>
+          <p style={{ color: '#C9A961', fontSize: '14px', marginBottom: '32px' }}>
             +150 loyalty points earned!
           </p>
           <button className="btn-primary" onClick={() => navigate('/')}>
@@ -100,7 +100,7 @@ export function ReservationsScreen() {
                   <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.5)' }}>Party of {res.party}</div>
                 </div>
                 <span style={{
-                  background: '#10b981',
+                  background: '#C9A961',
                   color: 'white',
                   padding: '4px 12px',
                   borderRadius: '12px',
@@ -122,7 +122,7 @@ export function ReservationsScreen() {
       {/* Party Size */}
       <div className="card" style={{ marginBottom: '16px', padding: '16px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
-          <Users size={20} color="#8b5cf6" />
+          <Users size={20} color="#722F37" />
           <span style={{ fontWeight: '500' }}>Party Size</span>
         </div>
         <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
@@ -132,7 +132,7 @@ export function ReservationsScreen() {
               onClick={() => setPartySize(size)}
               style={{
                 width: '44px', height: '44px', borderRadius: '12px',
-                border: partySize === size ? '2px solid #8b5cf6' : '1px solid rgba(255,255,255,0.2)',
+                border: partySize === size ? '2px solid #722F37' : '1px solid rgba(255,255,255,0.2)',
                 background: partySize === size ? 'rgba(139,92,246,0.2)' : 'transparent',
                 color: 'white', fontSize: '16px', cursor: 'pointer'
               }}
@@ -146,7 +146,7 @@ export function ReservationsScreen() {
       {/* Date Selection */}
       <div className="card" style={{ marginBottom: '16px', padding: '16px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
-          <Calendar size={20} color="#8b5cf6" />
+          <Calendar size={20} color="#722F37" />
           <span style={{ fontWeight: '500' }}>Select Date</span>
         </div>
         <div style={{ display: 'flex', gap: '8px', overflowX: 'auto', paddingBottom: '8px' }}>
@@ -156,7 +156,7 @@ export function ReservationsScreen() {
               onClick={() => setSelectedDate(date.value)}
               style={{
                 padding: '12px 16px', borderRadius: '12px', minWidth: '80px',
-                border: selectedDate === date.value ? '2px solid #8b5cf6' : '1px solid rgba(255,255,255,0.2)',
+                border: selectedDate === date.value ? '2px solid #722F37' : '1px solid rgba(255,255,255,0.2)',
                 background: selectedDate === date.value ? 'rgba(139,92,246,0.2)' : 'transparent',
                 color: 'white', fontSize: '13px', cursor: 'pointer', textAlign: 'center'
               }}
@@ -171,7 +171,7 @@ export function ReservationsScreen() {
       {/* Time Selection */}
       <div className="card" style={{ marginBottom: '24px', padding: '16px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
-          <Clock size={20} color="#8b5cf6" />
+          <Clock size={20} color="#722F37" />
           <span style={{ fontWeight: '500' }}>Select Time</span>
         </div>
         <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
@@ -181,7 +181,7 @@ export function ReservationsScreen() {
               onClick={() => setSelectedTime(time)}
               style={{
                 padding: '10px 16px', borderRadius: '12px',
-                border: selectedTime === time ? '2px solid #8b5cf6' : '1px solid rgba(255,255,255,0.2)',
+                border: selectedTime === time ? '2px solid #722F37' : '1px solid rgba(255,255,255,0.2)',
                 background: selectedTime === time ? 'rgba(139,92,246,0.2)' : 'transparent',
                 color: 'white', fontSize: '14px', cursor: 'pointer'
               }}
